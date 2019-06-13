@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SigninController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Text fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="122.78125">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="nome" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Text fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognome" wrappingWidth="160.71484375">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="cognome" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <Text fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Data di nascita" wrappingWidth="210.07421875">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <DatePicker fx:id="data" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <Text fx:id="mail" fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="87.5859375" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="email" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="135.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+               <children>
+                  <Text fx:id="user" fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="127.765625">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="username" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+               <children>
+                  <Text fx:id="passw" fill="#e87918" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="123.6015625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <PasswordField fx:id="password" prefWidth="200.0" promptText="minimo 8 caratteri...">
+                     <HBox.margin>
+                        <Insets left="105.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <VBox layoutX="400.0" layoutY="350.0" prefHeight="200.0" prefWidth="221.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="170.0">
+               <children>
+                  <Label fx:id="notMail" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets right="150.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="notPass" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets right="150.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="notUser" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets right="150.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutY="578.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="578.0">
+               <children>
+                  <Button fx:id="conferma" mnemonicParsing="false" onAction="#confermaDati" prefWidth="100.0" text="Conferma" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="annulla" mnemonicParsing="false" onAction="#annullaIscrizione" prefWidth="100.0" text="Annulla" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
