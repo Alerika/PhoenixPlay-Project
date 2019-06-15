@@ -71,13 +71,12 @@ public class SigninController
     {
     	main.avviaPaginaIniziale();
     }
-
-    @SuppressWarnings("unlikely-arg-type")
+    
 	@FXML //conferma la registrazione
 	public void confermaDati(ActionEvent event) throws UnknownHostException, SQLException, IOException 
 	{
     	Client c = new Client();
-    	boolean userLibero = usernameLibero();//c.usernameLibero(username.getText());
+    	boolean userLibero = c.usernameLibero(username.getText());
     	boolean mailValida = mailValida();//Pattern.matches("^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$", email.getText());
         boolean passValida = passwordValida();//(password.getText().length() > 8);
       

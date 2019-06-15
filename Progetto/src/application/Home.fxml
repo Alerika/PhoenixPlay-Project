@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -53,13 +53,13 @@
                         <ImageView fx:id="logo" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <AnchorPane BorderPane.alignment="CENTER">
+                        <AnchorPane stylesheets="@application.css" BorderPane.alignment="TOP_CENTER">
                            <children>
-                              <TextField fx:id="barraRicerca" layoutY="38.0" minWidth="200.0" prefWidth="300.0" promptText="Inserisci titolo..." AnchorPane.leftAnchor="100.0">
+                              <TextField fx:id="barraRicerca" alignment="TOP_CENTER" layoutY="38.0" minWidth="200.0" prefWidth="300.0" promptText="Inserisci titolo..." stylesheets="@application.css" AnchorPane.leftAnchor="100.0">
                                  <font>
                                     <Font name="System Italic" size="12.0" />
                                  </font></TextField>
-                              <Button fx:id="cerca" layoutX="149.0" layoutY="38.0" mnemonicParsing="false" onAction="#tastoCerca" prefWidth="50.0" text="Cerca" AnchorPane.leftAnchor="405.0" />
+                              <Button fx:id="cerca" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="149.0" layoutY="38.0" mnemonicParsing="false" onAction="#tastoCerca" prefHeight="26.0" prefWidth="58.0" text="Cerca" textAlignment="CENTER" AnchorPane.leftAnchor="405.0" />
                            </children>
                         </AnchorPane>
                      </center>

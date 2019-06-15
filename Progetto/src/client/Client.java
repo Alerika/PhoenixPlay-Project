@@ -45,9 +45,11 @@ public class Client
 		InputStream istream = socket.getInputStream();
 		BufferedReader in = new BufferedReader(new InputStreamReader(istream));
 		String risultato = in.readLine();
+		
+		if(risultato == null) 
+		{socket.close();
+			return true;}
 		socket.close();
-		if(risultato.equals(""))
-			return true;
 		return false;
 	}
 
@@ -61,12 +63,10 @@ public class Client
 		InputStream istream = socket.getInputStream();
 		BufferedReader in = new BufferedReader(new InputStreamReader(istream));
 		String risultato = in.readLine();
-		if(risultato.equals(username))
-		{
-			socket.close();
-			return false;
-		}
 		socket.close();
+		
+		if( risultato == username)
+			return false;
 		return true;
 	}
 }
